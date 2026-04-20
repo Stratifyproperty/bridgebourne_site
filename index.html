@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Bridgebourne Property Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container": "#eeeeeb",
+                    "primary": "#00281d",
+                    "on-primary": "#ffffff",
+                    "inverse-on-surface": "#f1f1ee",
+                    "on-primary-fixed-variant": "#17503f",
+                    "error-container": "#ffdad6",
+                    "tertiary-container": "#253a43",
+                    "primary-container": "#004030",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#261900",
+                    "surface-dim": "#dadad7",
+                    "secondary-fixed-dim": "#f7bd43",
+                    "on-tertiary-fixed-variant": "#354a53",
+                    "surface-container-highest": "#e2e3e0",
+                    "on-tertiary-fixed": "#071e27",
+                    "on-primary-container": "#75ac97",
+                    "outline-variant": "#c0c9c3",
+                    "on-primary-fixed": "#002117",
+                    "tertiary-fixed-dim": "#b4cad6",
+                    "tertiary-fixed": "#cfe6f2",
+                    "error": "#ba1a1a",
+                    "surface-container-high": "#e8e8e5",
+                    "on-tertiary-container": "#8ea4af",
+                    "on-surface": "#1a1c1b",
+                    "surface": "#f9f9f6",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#f9f9f6",
+                    "surface-container-low": "#f4f4f1",
+                    "on-secondary-fixed-variant": "#5d4200",
+                    "on-secondary-container": "#705100",
+                    "on-background": "#1a1c1b",
+                    "secondary": "#7b5800",
+                    "inverse-primary": "#9ad2bc",
+                    "secondary-fixed": "#ffdea5",
+                    "surface-tint": "#326856",
+                    "primary-fixed": "#b6efd7",
+                    "tertiary": "#0f252d",
+                    "surface-variant": "#e2e3e0",
+                    "secondary-container": "#fdc348",
+                    "outline": "#707974",
+                    "on-surface-variant": "#404944",
+                    "on-error-container": "#93000a",
+                    "surface-bright": "#f9f9f6",
+                    "primary-fixed-dim": "#9ad2bc",
+                    "on-secondary": "#ffffff",
+                    "inverse-surface": "#2f312f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Manrope"],
+                    "label": ["Manrope"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .serif-display { font-family: 'Noto Serif', serif; }
+        .sans-utility { font-family: 'Manrope', sans-serif; }
+        .glass-nav { backdrop-filter: blur(20px); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface sans-utility selection:bg-secondary-fixed-dim selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/80 dark:bg-stone-950/80 backdrop-blur-xl shadow-[0_12px_40px_rgba(26,28,27,0.04)]">
+<div class="flex items-center justify-between px-12 py-6 max-w-[1920px] mx-auto">
+<a href="#" class="flex items-center">
+<img src="logo.png" alt="Bridgebourne Property Services" class="h-14 w-auto">
+</a>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-serif text-lg tracking-tight text-amber-700 dark:text-amber-500 border-b border-amber-700/30 pb-1 transition-colors duration-300" href="index.html">Home</a>
+<a class="font-serif text-lg tracking-tight text-emerald-900/70 dark:text-stone-400 hover:text-amber-700 transition-colors duration-300" href="#services">Services</a>
+<a class="font-serif text-lg tracking-tight text-emerald-900/70 dark:text-stone-400 hover:text-amber-700 transition-colors duration-300" href="landlord-contact.html">Landlords</a>
+<a class="font-serif text-lg tracking-tight text-emerald-900/70 dark:text-stone-400 hover:text-amber-700 transition-colors duration-300" href="tenant-maintenance.html">Tenants</a>
+<a class="font-serif text-lg tracking-tight text-emerald-900/70 dark:text-stone-400 hover:text-amber-700 transition-colors duration-300" href="useful-links.html">Useful Links</a>
+</div>
+<a href="tenant-maintenance.html" class="bg-primary text-on-primary px-8 py-3 rounded-xl scale-100 active:scale-95 transition-transform font-bold inline-block">Report an Issue</a>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" alt="Luxurious modern apartment interior with floor to ceiling windows, designer furniture, and soft sunset lighting reflecting on polished floors." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-5zlak2BQeT4YhNa2-OIeMgQSf3r9JtsMEJlOQfjgE67WlgbTQocUFOEXFapTcorAM249XufFZJxoTsQBHn6xVQKcsSbptZBCWbIJ_hfOWyMAsP9fAH2nTMnVXRklfb5BTpRquo_KWaacYBneVYi-3kK9-hQroYf6ZLH4q8Wej8YuFvftbhCpco76hXBHV28jGGdB-89w1OoPlBXgQDY7W_6tHBkYLB0rmz2sjwxXSu0zFTzhUwdC2ehWElJ82iQjTCxqpPj3hA">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary-container/40"></div>
+</div>
+<div class="relative z-10 px-12 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-8">
+<h1 class="serif-display text-5xl md:text-7xl lg:text-8xl text-on-primary leading-[1.1] mb-8">
+                    We manage your properties <span class="italic text-secondary-fixed-dim">as if they're our own.</span>
+</h1>
+<p class="text-on-primary/80 text-xl md:text-2xl max-w-2xl font-light mb-12 leading-relaxed">
+                    Bridgebourne Property Management, dedicated HMO, residential, and lettings management across London.
+                </p>
+<div class="flex flex-wrap gap-6">
+<a href="landlord-contact.html" class="bg-secondary-container text-on-secondary-container px-10 py-5 rounded-xl font-bold text-lg hover:shadow-xl transition-all inline-block">
+                        Get in Touch
+                    </a>
+<a href="#services" class="border border-on-primary/30 text-on-primary px-10 py-5 rounded-xl font-bold text-lg hover:bg-white/10 backdrop-blur-sm transition-all inline-block">
+                        What We Do
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- About & Stats Section -->
+<section class="py-32 px-12 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="absolute -top-12 -left-12 w-48 h-48 bg-secondary/10 rounded-full blur-3xl"></div>
+<img class="rounded-xl shadow-2xl relative z-10" alt="Professional property manager shaking hands with a client in a bright, modern minimalist office space with greenery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoXHiHqjfnEcI-1ZEvW8GPvHRhBnHUHgRQj9YtP1DkswOFNhStTYU9pUe8QG5sp_L2mAZUzdYrNnHzkxzaIi5HveS63yXitk3oMNECFSpq_CKIJi69vQTZAXjtqk0i51gXvlBuhaw7T8f-pnkdIHNbc_l3VCaJrIufvlj5uR9OyjKdmbZJ-RiEOILej_l-32UOfwehQXPtWZowBwF0qnnAWvyW3uMawNXIbRvkiFNgD_biUs4YPRQ6yaj6XM8ZrBa2_So1yjdVfg">
+<div class="absolute -bottom-8 -right-8 bg-primary p-8 rounded-xl z-20 hidden md:block">
+<span class="serif-display text-4xl text-on-primary block">10+ Years</span>
+<span class="text-on-primary/70 text-sm tracking-widest uppercase">London Experience</span>
+</div>
+</div>
+<div>
+<h2 class="serif-display text-4xl md:text-5xl text-primary mb-8 leading-tight">
+                        Your Partner in <span class="text-secondary italic">Seamless</span> Property Management
+                    </h2>
+<p class="text-on-surface-variant text-lg leading-relaxed mb-12">
+                        We don't just collect rent. We act as strategic partners to landlords, solving complex problems before they arise. From navigating the intricacies of HMO compliance to ensuring maintenance is handled within hours, we allow you to enjoy the rewards of property ownership without the stress.
+                    </p>
+<!-- Stats Grid -->
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-2">
+<div class="serif-display text-4xl text-primary">100+</div>
+<div class="text-on-surface-variant font-semibold text-sm uppercase tracking-wider">Properties Managed</div>
+</div>
+<div class="space-y-2">
+<div class="serif-display text-4xl text-primary">48hr</div>
+<div class="text-on-surface-variant font-semibold text-sm uppercase tracking-wider">Maintenance Response</div>
+</div>
+<div class="space-y-2">
+<div class="serif-display text-4xl text-primary">5★</div>
+<div class="text-on-surface-variant font-semibold text-sm uppercase tracking-wider">Landlord Reviews</div>
+</div>
+<div class="space-y-2">
+<div class="serif-display text-4xl text-primary">100%</div>
+<div class="text-on-surface-variant font-semibold text-sm uppercase tracking-wider">Compliance Handled</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid (Bento Style) -->
+<section id="services" class="py-32 px-12 bg-surface-container-low scroll-mt-24">
+<div class="max-w-7xl mx-auto">
+<div class="mb-20 text-center">
+<h2 class="serif-display text-5xl text-primary mb-4">Our Expertise</h2>
+<div class="h-1 w-24 bg-secondary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[800px]">
+<!-- Service 1: Residential -->
+<div class="md:col-span-8 bg-surface-container-lowest p-10 rounded-xl flex flex-col justify-between group overflow-hidden relative">
+<div class="absolute inset-0 opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+<img class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-700" alt="Interior of a modern kitchen with clean lines and marble surfaces, soft afternoon sunlight." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoN0gBO5QqB7WhxXV3XeMaEImmv1L8a0J6ylU5ZALk7nEzJAK1fZRkTXVN_aH70MwpUJOdaa5GD5luFTlSv9e17bWN6WYwDf8k9XJMgEwZBr6Er0pXsOZWMw-LHsugnB-ezHqeqqJmWk-w_hMiHujGVUHo88SxH01SnJLA5RUiEMSG6tGKomsGpOjLw3C0_CM2o9lVaC61WwhGoyUqXDNf2iBPiFmGcYwfdLQCwZeWEO3YJlWclKOg8-2GvdWIwV45PRfCTsYMJw">
+</div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6">home_work</span>
+<h3 class="serif-display text-3xl text-primary mb-4">Residential Management</h3>
+<p class="text-on-surface-variant max-w-md">Comprehensive care for single-occupancy homes, focusing on tenant longevity and asset preservation.</p>
+</div>
+<button class="flex items-center gap-2 text-primary font-bold group-hover:gap-4 transition-all">
+                        Explore Service <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Service 2: HMO -->
+<div class="md:col-span-4 bg-primary p-10 rounded-xl text-on-primary flex flex-col justify-between hover:bg-primary-container transition-colors">
+<div>
+<span class="material-symbols-outlined text-4xl text-secondary-fixed-dim mb-6">group</span>
+<h3 class="serif-display text-3xl mb-4">HMO Management</h3>
+<p class="text-on-primary/70">Specialist management for Houses in Multiple Occupation. We handle complex licensing and high-frequency maintenance.</p>
+</div>
+<button class="flex items-center gap-2 text-secondary-fixed-dim font-bold">
+                        Learn More <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Service 3: Lettings -->
+<div class="md:col-span-4 bg-surface-container-highest p-10 rounded-xl flex flex-col justify-between hover:bg-surface-variant transition-colors">
+<div>
+<span class="material-symbols-outlined text-4xl text-primary mb-6">key</span>
+<h3 class="serif-display text-3xl text-primary mb-4">Lettings</h3>
+<p class="text-on-surface-variant">Finding high-caliber tenants through rigorous vetting and strategic marketing across major portals.</p>
+</div>
+<button class="flex items-center gap-2 text-primary font-bold">
+                        Start Letting <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+<!-- Service 4: Maintenance -->
+<div class="md:col-span-8 bg-surface-container-lowest p-10 rounded-xl flex items-center justify-between group">
+<div class="max-w-md">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6">build</span>
+<h3 class="serif-display text-3xl text-primary mb-4">Maintenance &amp; Compliance</h3>
+<p class="text-on-surface-variant">24/7 reactive maintenance and proactive compliance audits to keep your property legal and safe.</p>
+</div>
+<div class="hidden md:block w-1/3 aspect-square rounded-full overflow-hidden border-8 border-surface-container">
+<img class="w-full h-full object-cover" alt="Close up of a professional handyman fixing a sleek modern bathroom fixture with high quality tools." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBlTGINXPxUA2oS60JyBwsBM6EWPmo8uZ1fsQa1GL1GLbGjyiWaF3522XXa5ayzbmRYeNQ_zV75lD6v0rHJe05mV0B7Pa69L8ebGrJd8HBy9YzaVQrzmFnH1T1ocWo2Bri0dZkwYuKmhcqoqkbMCEMwlEpdzhHW6BiLFtSdcUtkO187I0A_odWyb7_V-oT-kjGROrZ9F9zSuYuR_02B0T3JSdDW-8dLVOGBesAdw1BbfvPtK8C8ulyI9FeB2qvEP_Hqzzh9TDihwg">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Us Section -->
+<section class="py-32 px-12 bg-primary text-on-primary overflow-hidden relative">
+<div class="absolute right-0 top-0 w-1/2 h-full opacity-10">
+<svg class="w-full h-full fill-white" viewBox="0 0 100 100">
+<path d="M0,100 Q50,0 100,100 Z"></path>
+</svg>
+</div>
+<div class="max-w-7xl mx-auto relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+<div>
+<h2 class="serif-display text-5xl mb-12">The Bridgebourne Difference</h2>
+<div class="space-y-12">
+<div class="flex gap-6">
+<div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white">bolt</span>
+</div>
+<div>
+<h4 class="text-2xl font-bold mb-2">Proactive Management</h4>
+<p class="text-on-primary/70 leading-relaxed text-lg">We don't wait for things to break. Regular inspections and preventative care are the cornerstone of our service.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white">verified</span>
+</div>
+<div>
+<h4 class="text-2xl font-bold mb-2">Specialist HMO Knowledge</h4>
+<p class="text-on-primary/70 leading-relaxed text-lg">The London HMO market is complex. We are experts in Article 4 directions and mandatory licensing.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-white">visibility</span>
+</div>
+<div>
+<h4 class="text-2xl font-bold mb-2">Full Transparency</h4>
+<p class="text-on-primary/70 leading-relaxed text-lg">Detailed monthly reporting and an open-door policy mean you always know how your investment is performing.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<img class="rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" alt="Exterior of a classic London townhouse with white stucco and black iron railings, captured during the golden hour." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfed0FXocUJQsRfefTY6ITys9Towr_UCfta8L8Ly3PpK0nhLRN5NTX0sOedtv0iskwFq8rGUo9S98p-Gx6zK1gDu431Qeic_nFRTn77DjCVrMrHqvDxgV647-kfNr24Zp8RjSKn1E78LWL-JypW2tB-5-nwadAQY4ijlz7JN-BnNqtOnDDS3DHrjBKY8QHRGFcG26Vpbr9dWGlWUIhX2O8mYW0j2zrNKY9NY_Mn-qmGyNd4CRPCVP5eKl9kVxlWYz-Nuvz_YcgMg">
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="py-32 px-12 bg-surface">
+<div class="max-w-7xl mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<span class="text-secondary font-bold uppercase tracking-[0.2em] mb-4 block">Testimonials</span>
+<h2 class="serif-display text-5xl text-primary">Trusted by London's Finest Landlords</h2>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Review 1 -->
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between hover:-translate-y-2 transition-transform">
+<div class="space-y-4">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant font-light">"The transition to Bridgebourne was seamless. My HMO has never been managed better."</p>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/30">
+<div class="font-bold text-primary">D. Osei</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-widest">Multi-unit Landlord</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between hover:-translate-y-2 transition-transform">
+<div class="space-y-4">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant font-light">"Professional, reactive, and highly knowledgeable about London compliance laws."</p>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/30">
+<div class="font-bold text-primary">S. Patel</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-widest">Property Investor</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between hover:-translate-y-2 transition-transform">
+<div class="space-y-4">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant font-light">"They found me perfect tenants within 48 hours of listing. Exceptional service."</p>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/30">
+<div class="font-bold text-primary">R. Hassan</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-widest">Residential Owner</div>
+</div>
+</div>
+<!-- Review 4 -->
+<div class="bg-surface-container-low p-8 rounded-xl flex flex-col justify-between hover:-translate-y-2 transition-transform">
+<div class="space-y-4">
+<div class="flex text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+</div>
+<p class="italic text-on-surface-variant font-light">"The best property management firm I've worked with in over 20 years of being a landlord."</p>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/30">
+<div class="font-bold text-primary">A. Clarke</div>
+<div class="text-xs text-on-surface-variant uppercase tracking-widest">Portfolio Manager</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-stone-100 dark:bg-stone-900 w-full py-16 px-12 mt-20">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
+<div class="space-y-6">
+<img src="logo.png" alt="Bridgebourne Property Services" class="h-20 w-auto">
+<p class="text-emerald-900/60 dark:text-stone-500 font-sans text-sm tracking-wide">
+                    Elevating property management to an art form. Serving the unique needs of London's residential and HMO markets.
+                </p>
+</div>
+<div class="space-y-6">
+<h5 class="text-emerald-900 dark:text-emerald-400 font-bold uppercase text-xs tracking-widest">Services</h5>
+<ul class="space-y-4 font-sans text-sm tracking-wide">
+<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 transition-opacity" href="landlord-contact.html">Residential Management</a></li>
+<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 transition-opacity" href="landlord-contact.html">HMO Licensing</a></li>
+<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 transition-opacity" href="landlord-contact.html">Tenant Sourcing</a></li>
+<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 transition-opacity" href="landlord-job-request.html">Landlord Job Request</a></li>
+<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 transition-opacity" href="tenant-maintenance.html">Tenant Maintenance</a></li>
+<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 transition-opacity" href="useful-links.html">Useful Links</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="text-emerald-900 dark:text-emerald-400 font-bold uppercase text-xs tracking-widest">Information</h5>
+<ul class="space-y-4 font-sans text-sm tracking-wide">
+<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 transition-opacity" href="#">Privacy Policy</a></li>
+<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 transition-opacity" href="#">Terms of Service</a></li>
+<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 transition-opacity" href="#">Sustainability</a></li>
+<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 transition-opacity" href="#">Careers</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h5 class="text-emerald-900 dark:text-emerald-400 font-bold uppercase text-xs tracking-widest">Connect</h5>
+<p class="text-emerald-900/60 dark:text-stone-500 font-sans text-sm tracking-wide">
+                    124-128 City Road<br>
+                    London, EC1V 2NX<br>
+                    hello@bridgebourne.com
+                </p>
+</div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-emerald-900/10">
+<p class="text-emerald-900/60 dark:text-stone-500 font-sans text-sm tracking-wide text-center">
+                © 2024 Bridgebourne Property Services. Architectural Excellence.
+            </p>
+</div>
+</footer>
+</body>
+</html>
