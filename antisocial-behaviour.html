@@ -94,16 +94,14 @@
 <a href="index.html" class="flex items-center">
 <img src="logo.png" alt="Bridgebourne Property Services" class="h-14 w-auto"/>
 </a>
-<div class="hidden md:flex items-center space-x-10">
+<div class="hidden md:flex items-center gap-10">
 <a class="font-serif text-lg tracking-tight text-emerald-900/70 dark:text-stone-400 hover:text-amber-700 transition-colors duration-300" href="index.html">Home</a>
 <a class="font-serif text-lg tracking-tight text-emerald-900/70 dark:text-stone-400 hover:text-amber-700 transition-colors duration-300" href="index.html#services">Services</a>
 <a class="font-serif text-lg tracking-tight text-emerald-900/70 dark:text-stone-400 hover:text-amber-700 transition-colors duration-300" href="landlord-contact.html">Landlords</a>
 <a class="font-serif text-lg tracking-tight text-emerald-900/70 dark:text-stone-400 hover:text-amber-700 transition-colors duration-300" href="tenant-maintenance.html">Tenants</a>
-<a class="font-serif text-lg tracking-tight text-amber-700 dark:text-amber-500 border-b border-amber-700/30 pb-1" href="useful-links.html">Useful Links</a>
+<a class="font-serif text-lg tracking-tight text-amber-700 dark:text-amber-500 border-b border-amber-700/30 pb-1 transition-colors duration-300" href="useful-links.html">Useful Links</a>
 </div>
-<a href="landlord-contact.html" class="px-8 py-3 bg-signature-gradient text-on-primary rounded-xl font-medium scale-100 active:scale-95 transition-transform inline-block">
-                Enquire Now
-            </a>
+<a href="mailto:office@bridgebourne.co.uk?subject=Report%20an%20Issue" class="bg-primary text-on-primary px-8 py-3 rounded-xl scale-100 active:scale-95 transition-transform font-bold inline-block">Report an Issue</a>
 </div>
 </nav>
 <main class="pt-32 pb-20">
@@ -157,7 +155,7 @@
 </div>
 <div class="lg:col-span-8">
 <div class="bg-surface-container-lowest p-8 lg:p-12 rounded-xl shadow-[0_12px_40px_rgba(26,28,27,0.02)]">
-<form class="space-y-10">
+<form id="bb-form" data-subject="Antisocial Behaviour Report" class="space-y-10">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 <div class="space-y-2">
 <label class="block text-xs font-bold tracking-widest text-primary uppercase">Your Name</label>
@@ -181,11 +179,11 @@
 <div class="space-y-6">
 <label class="block text-xs font-bold tracking-widest text-primary uppercase">Nature of Incident</label>
 <div class="flex flex-wrap gap-3">
-<button class="px-6 py-3 rounded-full bg-secondary-fixed-dim text-on-secondary-fixed font-medium text-sm transition-all shadow-sm" type="button">Noise</button>
-<button class="px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant font-medium text-sm hover:bg-surface-container-highest transition-all" type="button">Harassment</button>
-<button class="px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant font-medium text-sm hover:bg-surface-container-highest transition-all" type="button">Damage</button>
-<button class="px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant font-medium text-sm hover:bg-surface-container-highest transition-all" type="button">Drugs</button>
-<button class="px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant font-medium text-sm hover:bg-surface-container-highest transition-all" type="button">Other</button>
+<label class="cursor-pointer"><input class="hidden peer" checked="" name="incident_type" type="radio" value="Noise"/><span class="px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant peer-checked:bg-secondary-fixed-dim peer-checked:text-on-secondary-fixed font-medium text-sm hover:bg-surface-container-highest transition-all inline-block">Noise</span></label>
+<label class="cursor-pointer"><input class="hidden peer" name="incident_type" type="radio" value="Harassment"/><span class="px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant peer-checked:bg-secondary-fixed-dim peer-checked:text-on-secondary-fixed font-medium text-sm hover:bg-surface-container-highest transition-all inline-block">Harassment</span></label>
+<label class="cursor-pointer"><input class="hidden peer" name="incident_type" type="radio" value="Damage"/><span class="px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant peer-checked:bg-secondary-fixed-dim peer-checked:text-on-secondary-fixed font-medium text-sm hover:bg-surface-container-highest transition-all inline-block">Damage</span></label>
+<label class="cursor-pointer"><input class="hidden peer" name="incident_type" type="radio" value="Drugs"/><span class="px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant peer-checked:bg-secondary-fixed-dim peer-checked:text-on-secondary-fixed font-medium text-sm hover:bg-surface-container-highest transition-all inline-block">Drugs</span></label>
+<label class="cursor-pointer"><input class="hidden peer" name="incident_type" type="radio" value="Other"/><span class="px-6 py-3 rounded-full bg-surface-container-high text-on-surface-variant peer-checked:bg-secondary-fixed-dim peer-checked:text-on-secondary-fixed font-medium text-sm hover:bg-surface-container-highest transition-all inline-block">Other</span></label>
 </div>
 </div>
 <div class="space-y-2">
@@ -220,36 +218,119 @@
 <!-- Footer -->
 <footer class="bg-stone-100 dark:bg-stone-900 w-full py-16 px-12 mt-20">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto">
-<div class="md:col-span-1">
-<img src="logo.png" alt="Bridgebourne Property Services" class="h-20 w-auto mb-6"/>
-<p class="text-emerald-900/60 dark:text-stone-500 font-sans text-sm tracking-wide leading-relaxed">
-                    © 2024 Bridgebourne Property Services. Architectural Excellence.
+<div class="space-y-6">
+<img src="logo.png" alt="Bridgebourne Property Services" class="h-20 w-auto"/>
+<p class="text-emerald-900/60 dark:text-stone-500 font-sans text-sm tracking-wide">
+                    Elevating property management to an art form. Serving the unique needs of London's residential and HMO markets.
                 </p>
 </div>
-<div>
-<h4 class="text-primary font-bold mb-6">Services</h4>
+<div class="space-y-6">
+<h5 class="text-emerald-900 dark:text-emerald-400 font-bold uppercase text-xs tracking-widest">Services</h5>
 <ul class="space-y-4 font-sans text-sm tracking-wide">
-<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 underline-offset-4 hover:underline transition-opacity" href="landlord-contact.html">Asset Management</a></li>
-<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 underline-offset-4 hover:underline transition-opacity" href="landlord-contact.html">Luxury Lettings</a></li>
-<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 underline-offset-4 hover:underline transition-opacity" href="landlord-job-request.html">Job Requests</a></li>
+<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 transition-opacity" href="landlord-contact.html">Residential Management</a></li>
+<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 transition-opacity" href="landlord-contact.html">HMO Licensing</a></li>
+<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 transition-opacity" href="landlord-contact.html">Tenant Sourcing</a></li>
+<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 transition-opacity" href="landlord-job-request.html">Landlord Job Request</a></li>
+<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 transition-opacity" href="tenant-maintenance.html">Tenant Maintenance</a></li>
+<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 transition-opacity" href="useful-links.html">Useful Links</a></li>
 </ul>
 </div>
-<div>
-<h4 class="text-primary font-bold mb-6">Legal</h4>
+<div class="space-y-6">
+<h5 class="text-emerald-900 dark:text-emerald-400 font-bold uppercase text-xs tracking-widest">Information</h5>
 <ul class="space-y-4 font-sans text-sm tracking-wide">
-<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 underline-offset-4 hover:underline transition-opacity" href="#">Privacy Policy</a></li>
-<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 underline-offset-4 hover:underline transition-opacity" href="#">Terms of Service</a></li>
-<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 underline-offset-4 hover:underline transition-opacity" href="#">Sustainability</a></li>
+<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 transition-opacity" href="#">Privacy Policy</a></li>
+<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 transition-opacity" href="#">Terms of Service</a></li>
+<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 transition-opacity" href="#">Sustainability</a></li>
+<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 transition-opacity" href="#">Careers</a></li>
 </ul>
 </div>
-<div>
-<h4 class="text-primary font-bold mb-6">Connect</h4>
-<ul class="space-y-4 font-sans text-sm tracking-wide">
-<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 underline-offset-4 hover:underline transition-opacity" href="useful-links.html">Useful Links</a></li>
-<li><a class="text-emerald-900/60 dark:text-stone-500 hover:text-amber-600 underline-offset-4 hover:underline transition-opacity" href="tenant-maintenance.html">Tenant Portal</a></li>
-</ul>
+<div class="space-y-6">
+<h5 class="text-emerald-900 dark:text-emerald-400 font-bold uppercase text-xs tracking-widest">Connect</h5>
+<p class="text-emerald-900/60 dark:text-stone-500 font-sans text-sm tracking-wide">
+                    124-128 City Road<br/>
+                    London, EC1V 2NX<br/>
+                    <a class="hover:text-amber-600 transition-opacity" href="tel:02081039427">020 8103 9427</a><br/>
+                    <a class="hover:text-amber-600 transition-opacity" href="mailto:office@bridgebourne.co.uk">office@bridgebourne.co.uk</a>
+                </p>
 </div>
+</div>
+<div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-emerald-900/10">
+<p class="text-emerald-900/60 dark:text-stone-500 font-sans text-sm tracking-wide text-center">
+                © 2024 Bridgebourne Property Services. Architectural Excellence.
+            </p>
 </div>
 </footer>
+<script>
+(function(){
+  const form = document.getElementById('bb-form');
+  if(!form) return;
+  function textFromWrappingLabel(el){
+    const wrap = el.closest('label');
+    if(!wrap) return '';
+    const clone = wrap.cloneNode(true);
+    clone.querySelectorAll('input, textarea, select').forEach(n => n.remove());
+    return clone.textContent.trim().replace(/\s+/g, ' ');
+  }
+  function getLabel(el){
+    if(el.id){
+      const l = form.querySelector('label[for="'+CSS.escape(el.id)+'"]');
+      if(l) return l.textContent.trim();
+    }
+    const inside = textFromWrappingLabel(el);
+    if(inside) return inside;
+    let p = el.parentElement;
+    while(p && p !== form){
+      for(const c of p.children){
+        if(c.tagName === 'LABEL' && !c.contains(el)) return c.textContent.trim();
+      }
+      p = p.parentElement;
+    }
+    return el.name || '';
+  }
+  function getGroupLabel(el){
+    let p = el.parentElement;
+    while(p && p !== form){
+      for(const c of p.children){
+        if(c.tagName === 'LABEL' && !c.contains(el) && !c.querySelector('input, textarea, select')){
+          return c.textContent.trim();
+        }
+      }
+      p = p.parentElement;
+    }
+    return el.name || '';
+  }
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const lines = [];
+    const radioSeen = new Set();
+    form.querySelectorAll('input, textarea, select').forEach(function(el){
+      const t = el.type;
+      if(t === 'submit' || t === 'button' || t === 'file' || (t === 'hidden' && !el.dataset.include)) return;
+      if(t === 'radio'){
+        if(radioSeen.has(el.name)) return;
+        radioSeen.add(el.name);
+        const checked = form.querySelector('input[name="'+el.name+'"]:checked');
+        if(!checked) return;
+        const val = textFromWrappingLabel(checked) || checked.value;
+        lines.push(getGroupLabel(checked) + ': ' + val);
+        return;
+      }
+      if(t === 'checkbox'){
+        if(!el.checked) return;
+        const l = getLabel(el);
+        if(l) lines.push(l + ': Yes');
+        return;
+      }
+      const val = (el.value || '').trim();
+      if(!val) return;
+      const l = getLabel(el);
+      if(l) lines.push(l + ': ' + val);
+    });
+    const subject = form.dataset.subject || 'Bridgebourne website enquiry';
+    const body = lines.join('\n');
+    window.location.href = 'mailto:office@bridgebourne.co.uk?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+  });
+})();
+</script>
 </body>
 </html>
